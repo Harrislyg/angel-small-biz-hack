@@ -6,6 +6,8 @@ import classNames from 'classnames'
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')
 const Overview = require('./components/Overview.jsx')
+const ReachingTarget = require('./components/ReachingTarget.jsx')
+
 
 // Load stylesheets
 require('./scss/application.scss')
@@ -50,9 +52,10 @@ class App extends Component {
   // Populate the child components here
   get _childComponents() {
     return [
-      { linkCaption: 'Overview', component: <Overview /> },
-      { linkCaption: 'Transaction', component: <Transaction /> },
-      { linkCaption: 'Reaching your target', component: <div /> }
+      { linkCaption: 'Overview', component:<Overview/> },
+      { linkCaption: 'Transaction', component: <Transaction/> },
+      { linkCaption: 'Reaching your target', component: <ReachingTarget/> }
+
     ]
   }
 

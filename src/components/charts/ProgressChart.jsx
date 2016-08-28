@@ -28,7 +28,7 @@ var ProgressChart=React.createClass({
     },
     updateData:function(){
  
-        var value=(Math.floor(Math.random() * (80) + 10))/100;
+        var value=(Math.floor(Math.random()*100)/100);
  
         this.setState({percent:value});
     },

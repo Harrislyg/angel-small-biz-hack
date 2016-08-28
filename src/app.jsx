@@ -49,9 +49,6 @@ class App extends Component {
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
 
-        <div>
-          <Transaction />
-        </div>
 
 
 
@@ -63,7 +60,7 @@ class App extends Component {
   get _childComponents() {
     return [
       { linkCaption: 'Overview', component: <div /> },
-      { linkCaption: 'Transaction', component: <div /> },
+      { linkCaption: 'Transaction', component: <Transaction /> },
       { linkCaption: 'Reaching your target', component: <div /> }
     ]
   }

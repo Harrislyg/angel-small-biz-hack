@@ -1,28 +1,31 @@
 var React = require('react')
 var Outflow = require('./Outflow.jsx')
 var Inflowrow = require('./Inflowrow.jsx')
+let filteredDate
 
 class Inflow extends React.Component {
 
-  constructor () {
-    super()
-    this.state = {
-      inflowData: []
-    }
+  constructor (props) {
+    super(props)
   }
 
-  getInflowData () {
-      this.setState({
-        inflowData: this.props.inflowData
-      })
-  }
 
-  componentWillMount () {
-    this.getInflowData()
-  }
+  // filter(a) { return Date(a.date).getMonth()+1 === this.props.sliderDate }
 
   render () {
-    console.log(this.state.inflowData.CCTranHistoryResponseData.TransactionDetails.TransactionData)
+    // console.log('Inflow Data', this.state.inflowData)
+    let date = this.props.sliderDate;
+    console.log("this is the " + date)
+
+  if (this.props.category == 'All') {
+    filteredDate = this.props.inflowData.filter((a) => (new Date(a.date).getMonth() + 1 == date) && a.type == 'inflow')
+  } else {
+    filteredDate = this.props.inflowData.filter((a) => (new Date(a.date).getMonth() + 1 == date) && a.type == 'inflow' && a.category == this.props.category)
+  }
+
+  console.log('Outflow date', filteredDate)
+  console.log(this.props.inflowData)
+    // let filteredDate = this.state.inflowData.filter(=>)
 
     return (
         <div>
@@ -30,19 +33,20 @@ class Inflow extends React.Component {
             <thead>
               <tr>
                 <th>Date</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Status</th>
+                <th>Category<select onChange={this.props.onSelect}>
+                  <option value="All">All</option>
+                  <option value="Cash from Operating Activities">Cash from Operating Activities</option>
+                  <option value="Cash from Investments">Cash from Investments</option>
+                  <option value="Cash from Financing Activities">Cash from Financing Activities</option>
+                </select>
+                </th>
                 <th>Deposits</th>
                 <th>Balance</th>
               </tr>
 
-              {this.state.inflowData.CCTranHistoryResponseData.TransactionDetails.TransactionData.map((inflowRow, i) => (<Inflowrow inflowRow={inflowRow} index={i} key={i}/>))}
+              {filteredDate.map((inflowRow, i) => (<Inflowrow inflowRow={inflowRow} index={i} key={i}/>))}
 
             </thead>
-
-
-
 
         </table>
       </div>

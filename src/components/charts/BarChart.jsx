@@ -1,3 +1,7 @@
+import React from 'react'
+
+var d3 = require('react-d3');
+
 var BarChart=React.createClass({
     getDefaultProps: function() {
         return {
@@ -11,7 +15,6 @@ var BarChart=React.createClass({
             width:0
         };
     },
-    mixins:[resizeMixin],
  
     render:function(){
         var data=[
@@ -80,4 +83,4 @@ var BarChart=React.createClass({
  
 });
  
-window.BarChart=BarChart;
+module.exports = BarChart;

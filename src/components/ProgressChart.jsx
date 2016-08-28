@@ -1,6 +1,39 @@
-import React from 'react'
+import React from 'react'; 
 
-var InsetShadow = require('./InsetShadow.jsx') 
+class ProgressChart extends React.Component {
+    constructor(props) {
+        super(props);
+        this.width: 200,
+        this.height: 200,
+        this.chartId: 'v_chart',
+
+        this.state = {
+        percent: 0;
+        }
+        this.updateData = this.updateData.bind(this);
+
+    }
+
+    updateData() {
+        return 
+    }
+
+     render() {
+    return <div>
+      <h1>Playing With React and D3</h1>
+      <ScatterPlot {...this.state} {...styles} />
+      <div className="controls">
+        <button className="btn randomize" onClick={() => this.randomizeData()}>
+          Randomize Data
+        </button>
+      </div>
+    </div>
+  }
+}
+
+export default ;
+
+
 
 var ProgressChart=React.createClass({
     propTypes: {
@@ -19,7 +52,7 @@ var ProgressChart=React.createClass({
     getInitialState:function(){
         return {percent:0};
     },
-    componentWillMount:function(){
+    componentWillMount(){
  
         this.setState({percent:.87});
     },
@@ -84,4 +117,4 @@ var ProgressChart=React.createClass({
     }
 });
  
-module.exports = ProgressChart;
+window.ProgressChart=ProgressChart;

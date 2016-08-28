@@ -1,0 +1,66 @@
+//-------------------------------------------------------------------------------------------------
+// Constants
+//-------------------------------------------------------------------------------------------------
+$overview-stats-circle-radius: .625rem;
+$overview-stats-circle-y: .325rem;
+$overview-stats-title-inset: .875rem;
+//-------------------------------------------------------------------------------------------------
+// Components
+//-------------------------------------------------------------------------------------------------
+.overview__container {
+  padding: 2em;
+  padding-top: 5em;
+}
+
+.overview__stats--item {
+  display: inline-block;
+  margin-right: 3em;
+}
+.overview__stats--item:last-child {
+  margin-right: 0;
+}
+
+.overview__stats--title {
+  padding-left: $overview-stats-title-inset;
+  font-family: 'PT Sans', sans-serif;
+  color: #333;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: $overview-stats-circle-radius;
+    height: $overview-stats-circle-radius;
+    border-radius: 50%;
+    background-color: gray;
+
+    position: absolute;
+    top: $overview-stats-circle-y;
+    left: 0;
+  }
+}
+
+#overview__stats--inflows      > .overview__stats--title::before { background-color: #82D120; }
+#overview__stats--outflows     > .overview__stats--title::before { background-color: #FF6348; }
+#overview__stats--your_balance > .overview__stats--title::before { background-color: #FFCA6F; }
+#overview__stats--your_target  > .overview__stats--title::before { background-color: #58ADFA; }
+
+.overview__stats--currency,
+.overview__stats--amount {
+  display: inline-block;
+}
+
+.overview__stats--currency {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: .875rem;
+  color: #656565;
+  transform: translateY(-.375rem);
+}
+
+.overview__stats--amount {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #505050;
+}
+

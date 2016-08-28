@@ -2,25 +2,20 @@ var React = require('react')
 
 class Inflowrow extends React.Component {
   render () {
+    // console.log('inflowRow', this.props.inflowRow)
     return (
         <tr>
           <td>
-            {this.props.inflowRow.TransactionType}
+            {this.props.inflowRow.date}
           </td>
           <td>
-            {this.props.inflowRow.TransactionType}
+            {this.props.inflowRow.category}
           </td>
           <td>
-            {this.props.inflowRow.TransactionType}
+            {Math.round(this.props.inflowRow.deposits * 100) / 100}
           </td>
           <td>
-            {this.props.inflowRow.TransactionType}
-          </td>
-          <td>
-            {this.props.inflowRow.TransactionType}
-          </td>
-          <td>
-            {this.props.inflowRow.TransactionType}
+            {Math.round(this.props.inflowRow.balance * 100) / 100}
           </td>
         </tr>
     )

@@ -6,16 +6,7 @@ import rd3 from 'react-d3';
 
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')
-const BarChart = require('./components/charts/BarChart.jsx')
-const ProgressChart  = require('./components/charts/ProgressChart.jsx')
-const DonutChart = require('./components/charts/DonutChart.jsx')
-
-var PieChart = rd3.PieChart;
-var pieData = [
-  {label: 'Inventory', value: 20.0},
-  {label: 'Payroll', value: 55.0},
-  {label: 'Misc Exp', value: 25.0 }
-];
+const Overview = require('./components/Overview.jsx')
 
 // Load stylesheets
 require('./scss/application.scss')
@@ -31,9 +22,6 @@ class App extends Component {
 
     }
   }
-
-
-
 
   render() {
     let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
@@ -53,34 +41,19 @@ class App extends Component {
           {links}
         </div>
 
-
-
-        <Analytics />
-        <div className="app-container__child">
+        <div className="app-container__child box container">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
-
-
       </div>
     )
   }
 
   // Populate the child components here
-
-
-
   get _childComponents() {
     return [
-      { linkCaption: 'Overview', component:<PieChart
-  data={pieData}
-  width={400}
-  height={400}
-  radius={100}
-  innerRadius={20}
-  title="Expenses Pie Chart"
-/> },
-      { linkCaption: 'Transaction', component: <ProgressChart /> },
-      { linkCaption: 'Reaching your target', component: <div/> }
+      { linkCaption: 'Overview', component: <Overview /> },
+      { linkCaption: 'Transaction', component: <Transaction /> },
+      { linkCaption: 'Reaching your target', component: <div /> }
     ]
   }
 

@@ -1,4 +1,6 @@
-ar DonutChartPath=React.createClass({
+import React from 'react'
+
+var DonutChartPath=React.createClass({
     propTypes: {
         width:React.PropTypes.number,
         height:React.PropTypes.number,
@@ -119,7 +121,7 @@ var DonutChart=React.createClass({
         };
     },
  
-    mixins:[resizeMixin],
+    
  
     componentWillMount:function(){
  
@@ -174,5 +176,4 @@ var DonutChart=React.createClass({
         );
     }
 });
- 
-window.DonutChart = DonutChart
+ module.exports = DonutChart

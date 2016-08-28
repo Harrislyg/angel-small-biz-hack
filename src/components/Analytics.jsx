@@ -2,8 +2,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import Header from './Header.jsx';
 import Line from './Line.jsx';
+import Bar from './Bar.jsx';
+import BarChart2 from './BarChart2.jsx';
 import Slider from './Slider.jsx';
 import Goals from './Goals.jsx';
+import Pie from './Pie.jsx';
+
 
 class Analytics extends React.Component {
   	constructor(props) {
@@ -19,6 +23,7 @@ class Analytics extends React.Component {
     });
   }
 
+
   render() {
     return (
       <div>
@@ -27,6 +32,9 @@ class Analytics extends React.Component {
 
       <Slider onClick={this.handleChange} currentMonth={this.state.currentMonth} />
       <Line />
+      <Bar />
+      <BarChart2 />
+      <Pie />
       <p>Likes</p>
       </div>
     );

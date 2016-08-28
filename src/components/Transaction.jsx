@@ -1,15 +1,17 @@
 var React = require('react')
 var Inflow = require('./Inflow.jsx')
 var Outflow = require('./Outflow.jsx')
-import transactionData from 'json!../data/transaction.json'
+import transactionData from 'json!../data/filtered.json'
 
 class Transaction extends React.Component {
 
+
+
   render () {
-    console.log(transactionData)
+    console.log('Transaction', transactionData)
     return (
       <div>
-        <Inflow />
+        <Inflow inflowData={transactionData}/>
         <Outflow />
       </div>
     )

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Header from './components/Header.jsx';
+import Analytics from './components/Analytics.jsx';
 import { render } from 'react-dom'
 import classNames from 'classnames'
 
@@ -17,8 +17,12 @@ class App extends Component {
     this.state = {
       // Initialize state to always open the first child
       currentChildComponentIndex: 0
+
     }
   }
+
+
+
 
   render() {
     let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
@@ -38,9 +42,14 @@ class App extends Component {
           {links}
         </div>
 
+
+
+        <Analytics />
         <div className="app-container__child">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
+
+
       </div>
     )
   }

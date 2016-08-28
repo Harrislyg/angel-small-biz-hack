@@ -7,6 +7,7 @@ import rd3 from 'react-d3';
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')
 const Overview = require('./components/Overview.jsx')
+const ReachingTarget = require('./components/ReachingTarget.jsx')
 
 
 // Load stylesheets
@@ -52,16 +53,9 @@ class App extends Component {
   // Populate the child components here
   get _childComponents() {
     return [
-      { linkCaption: 'Overview', component:<PieChart
-  data={pieData}
-  width={400}
-  height={400}
-  radius={100}
-  innerRadius={20}
-  title="Expenses Pie Chart"
-/> },
-      { linkCaption: 'Transaction', component: <ProgressChart /> },
-      { linkCaption: 'Reaching your target', component: <bar/> }
+      { linkCaption: 'Overview', component:<Overview/> },
+      { linkCaption: 'Transaction', component: <Transaction/> },
+      { linkCaption: 'Reaching your target', component: <ReachingTarget/> }
 
     ]
   }

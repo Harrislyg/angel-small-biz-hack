@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import Analytics from './components/Analytics.jsx';
 import { render } from 'react-dom'
 import classNames from 'classnames'
+import Transaction from './components/Transaction.jsx';
 
 // Load external modules
-const Transaction = require('./components/Transaction.jsx')
 
 // Load stylesheets
 require('./scss/application.scss')
@@ -48,6 +48,11 @@ class App extends Component {
         <div className="app-container__child">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
+
+        <div>
+          <Transaction />
+        </div>
+
 
 
       </div>

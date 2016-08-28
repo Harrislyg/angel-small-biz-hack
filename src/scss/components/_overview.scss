@@ -17,12 +17,13 @@ $overview-stats-title-inset: .875rem;
   align-items: flex-start;
 }
 
-.overview__stats--item {
-  display: inline-block;
-  margin-right: 3em;
+.overview__stats {
+  display: flex;
+  align-items: flex-start;
 }
-.overview__stats--item:last-child {
-  margin-right: 0;
+
+.overview__stats--item {
+  padding: 1em;
 }
 
 .overview__stats--title {
@@ -69,3 +70,9 @@ $overview-stats-title-inset: .875rem;
   color: #505050;
 }
 
+.overview__stats--subtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .75rem;
+  color: #777;
+  transform: translateY(-.5em);
+}

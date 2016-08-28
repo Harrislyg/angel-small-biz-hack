@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Analytics from './components/Analytics.jsx';
 import { render } from 'react-dom'
 import classNames from 'classnames'
 
@@ -18,6 +19,7 @@ class App extends Component {
     this.state = {
       // Initialize state to always open the first child
       currentChildComponentIndex: 0
+
     }
   }
 

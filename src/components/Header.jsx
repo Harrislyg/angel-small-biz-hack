@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Slider from './Slider.jsx';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class Header extends React.Component {
       <a href="">Overview</a>
       <a href="">Your Transactions</a>
       <a href="">Eaching Your Target</a>
-      <Slider />
+
       </div>
     );
   }

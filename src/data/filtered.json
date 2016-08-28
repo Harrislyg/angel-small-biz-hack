@@ -1,0 +1,282 @@
+[
+{
+"category": "Miscellaneous",
+"date": "2016-08-03",
+"type": "outflow",
+"withdrawals": 1205.6634923780853,
+"balance": 22472.336507621916
+},
+{
+"category": "Cash from Financing Activities",
+"date": "2016-08-10",
+"type": "inflow",
+"deposits": 3474.15507474749,
+"balance": 25946.491582369406
+},
+{
+"category": "Investing and Financing",
+"date": "2016-08-12",
+"type": "outflow",
+"withdrawals": 1013.0886061175446,
+"balance": 24933.402976251862
+},
+{
+"category": "Rent and Utilities",
+"date": "2016-08-17",
+"type": "outflow",
+"withdrawals": 1066.144002378888,
+"balance": 23867.258973872973
+},
+{
+"category": "Cash from Operating Activities",
+"date": "2016-08-20",
+"type": "inflow",
+"deposits": 3231.8249852858407,
+"balance": 27099.083959158816
+},
+{
+"category": "Inventory",
+"date": "2016-08-22",
+"type": "outflow",
+"withdrawals": 1257.024731665857,
+"balance": 25842.05922749296
+},
+{
+"category": "Cash from Investments",
+"date": "2016-08-25",
+"type": "inflow",
+"deposits": 3258.9366371236288,
+"balance": 29100.995864616587
+},
+{
+"category": "Payroll",
+"date": "2016-08-29",
+"type": "outflow",
+"withdrawals": 1274.6153663392956,
+"balance": 27826.380498277293
+},
+{
+"category": "Investing and Financing",
+"date": "2016-09-01",
+"type": "outflow",
+"withdrawals": 1247.1499770951896,
+"balance": 26579.230521182104
+},
+{
+"category": "Inventory",
+"date": "2016-09-02",
+"type": "outflow",
+"withdrawals": 1241.3880470620113,
+"balance": 25337.842474120094
+},
+{
+"category": "Cash from Operating Activities",
+"date": "2016-09-11",
+"type": "inflow",
+"deposits": 3738.2477051952014,
+"balance": 29076.090179315295
+},
+{
+"category": "Payroll",
+"date": "2016-09-14",
+"type": "outflow",
+"withdrawals": 1212.2533217364014,
+"balance": 27863.836857578895
+},
+{
+"category": "Cash from Investments",
+"date": "2016-09-19",
+"type": "inflow",
+"deposits": 3403.9917647686148,
+"balance": 31267.82862234751
+},
+{
+"category": "Miscellaneous",
+"date": "2016-09-20",
+"type": "outflow",
+"withdrawals": 1359.772707456801,
+"balance": 29908.055914890712
+},
+{
+"category": "Cash from Financing Activities",
+"date": "2016-09-27",
+"type": "inflow",
+"deposits": 3950.401720228775,
+"balance": 33858.457635119485
+},
+{
+"category": "Rent and Utilities",
+"date": "2016-09-28",
+"type": "outflow",
+"withdrawals": 1000.5816036805495,
+"balance": 32857.87603143894
+},
+{
+"category": "Rent and Utilities",
+"date": "2016-10-01",
+"type": "outflow",
+"withdrawals": 1200.875238977878,
+"balance": 31657.000792461058
+},
+{
+"category": "Miscellaneous",
+"date": "2016-10-10",
+"type": "outflow",
+"withdrawals": 1196.9522053458325,
+"balance": 30460.048587115227
+},
+{
+"category": "Inventory",
+"date": "2016-10-12",
+"type": "outflow",
+"withdrawals": 977.2165784236179,
+"balance": 29482.83200869161
+},
+{
+"category": "Cash from Operating Activities",
+"date": "2016-10-15",
+"type": "inflow",
+"deposits": 4551.36237356923,
+"balance": 34034.19438226084
+},
+{
+"category": "Investing and Financing",
+"date": "2016-10-15",
+"type": "outflow",
+"withdrawals": 1357.5647152729882,
+"balance": 32676.62966698785
+},
+{
+"category": "Payroll",
+"date": "2016-10-18",
+"type": "outflow",
+"withdrawals": 984.709494633436,
+"balance": 31691.920172354414
+},
+{
+"category": "Cash from Investments",
+"date": "2016-10-19",
+"type": "inflow",
+"deposits": 3383.803322057094,
+"balance": 35075.723494411504
+},
+{
+"category": "Cash from Financing Activities",
+"date": "2016-10-24",
+"type": "inflow",
+"deposits": 3717.502409252616,
+"balance": 38793.22590366412
+},
+{
+"category": "Miscellaneous",
+"date": "2016-11-04",
+"type": "outflow",
+"withdrawals": 1134.4143269648434,
+"balance": 37658.81157669928
+},
+{
+"category": "Rent and Utilities",
+"date": "2016-11-09",
+"type": "outflow",
+"withdrawals": 1096.903632549594,
+"balance": 36561.90794414969
+},
+{
+"category": "Payroll",
+"date": "2016-11-12",
+"type": "outflow",
+"withdrawals": 1151.8306751921614,
+"balance": 35410.077268957524
+},
+{
+"category": "Cash from Operating Activities",
+"date": "2016-11-14",
+"type": "inflow",
+"deposits": 3876.112544712515,
+"balance": 39286.18981367004
+},
+{
+"category": "Investing and Financing",
+"date": "2016-11-15",
+"type": "outflow",
+"withdrawals": 1076.3656394870534,
+"balance": 38209.824174182984
+},
+{
+"category": "Cash from Financing Activities",
+"date": "2016-11-18",
+"type": "inflow",
+"deposits": 3349.3148754905965,
+"balance": 41559.139049673584
+},
+{
+"category": "Inventory",
+"date": "2016-11-23",
+"type": "outflow",
+"withdrawals": 1296.2089371493419,
+"balance": 40262.93011252424
+},
+{
+"category": "Cash from Investments",
+"date": "2016-11-7",
+"type": "inflow",
+"deposits": 4323.909243088025,
+"balance": 44586.83935561227
+},
+{
+"category": "Rent and Utilities",
+"date": "2016-12-05",
+"type": "outflow",
+"withdrawals": 1254.5213518671244,
+"balance": 43332.318003745146
+},
+{
+"category": "Investing and Financing",
+"date": "2016-12-06",
+"type": "outflow",
+"withdrawals": 1286.437301937558,
+"balance": 42045.88070180759
+},
+{
+"category": "Inventory",
+"date": "2016-12-08",
+"type": "outflow",
+"withdrawals": 1154.0760058079131,
+"balance": 40891.80469599968
+},
+{
+"category": "Payroll",
+"date": "2016-12-10",
+"type": "outflow",
+"withdrawals": 1334.9014650891124,
+"balance": 39556.90323091057
+},
+{
+"category": "Miscellaneous",
+"date": "2016-12-16",
+"type": "outflow",
+"withdrawals": 763.6970034110564,
+"balance": 38793.20622749951
+},
+{
+"category": "Cash from Investments",
+"date": "2016-12-2",
+"type": "inflow",
+"deposits": 4252.497593958768,
+"balance": 43045.70382145828
+},
+{
+"category": "Cash from Financing Activities",
+"date": "2016-12-28",
+"type": "inflow",
+"deposits": 5343.70172516916,
+"balance": 48389.40554662744
+},
+{
+"category": "Cash from Operating Activities",
+"date": "2016-12-29",
+"type": "inflow",
+"deposits": 4526.5944533725715,
+"balance": 52916.00000000001
+}
+]

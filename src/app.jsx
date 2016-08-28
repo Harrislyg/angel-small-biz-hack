@@ -17,6 +17,7 @@ var pieData = [
   {label: 'Misc Exp', value: 25.0 }
 ];
 
+
 // Load stylesheets
 require('./scss/application.scss')
 
@@ -80,7 +81,7 @@ class App extends Component {
   title="Expenses Pie Chart"
 /> },
       { linkCaption: 'Transaction', component: <ProgressChart /> },
-      { linkCaption: 'Reaching your target', component: <div/> }
+      { linkCaption: 'Reaching your target', component: <bar/> }
     ]
   }
 

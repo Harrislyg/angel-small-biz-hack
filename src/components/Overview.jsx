@@ -10,7 +10,8 @@ class Overview extends Component {
     super(props)
 
     this.state = {
-      currentMonth: new Date().getMonth()
+      currentMonth: new Date().getMonth(),
+      editingYourTarget: false
     }
 
     // Binding methods
@@ -66,11 +67,15 @@ class Overview extends Component {
         subtitleNode = <div className="overview__stats--subtitle">{statsData.subtitle}</div>;
       }
 
+      let amountNode = <div className="overview__stats--amount">{CurrencyFormatter.formatCurrency(statsData.amount)}</div>;
+      if (statsData.identifier === 'your_target') {
+      }
+
       return (
         <div className="overview__stats--item" key={index} id={`overview__stats--${statsData.identifier}`}>
           <div className="overview__stats--title">{statsData.title}</div>
           <div className="overview__stats--currency">{statsData.currency}</div>
-          <div className="overview__stats--amount">{CurrencyFormatter.formatCurrency(statsData.amount)}</div>
+          {amountNode}
           {subtitleNode}
         </div>
       );

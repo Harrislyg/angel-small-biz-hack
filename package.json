@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -d --watch",
-    "build" : "webpack -p"
+    "build": "webpack -p"
   },
   "author": "Mai Anh Vu",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5"
+    "babel-loader": "^6.2.5",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
     "babel-loader": "^6.2.5",

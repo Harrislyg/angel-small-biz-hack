@@ -1,0 +1,27 @@
+.app-container__links {
+  margin-top: 2em;
+  display: flex;
+}
+
+.app-container__link {
+  font-size: 1rem;
+  line-height: 3;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #4C4C4C;
+  flex: 1 1 33%;
+
+  text-align: center;
+  cursor: pointer;
+  transition: border-bottom-color 0.25s ease-out 0s;
+  border-bottom: .25rem transparent solid;
+
+  &:hover {
+    border-bottom-color: #FFE8BA;
+  }
+
+  &.active {
+    border-bottom-color: #FF7D10;
+  }
+}

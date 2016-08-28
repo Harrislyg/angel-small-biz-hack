@@ -1,8 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
+import classNames from 'classnames'
 
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')
+
+// Load stylesheets
+require('./scss/application.scss')
 
 class App extends Component {
 
@@ -18,15 +22,18 @@ class App extends Component {
   render() {
     let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
       .map((linkCaption, index) => {
+        let classes = classNames('app-container__link', { 'active': this.state.currentChildComponentIndex == index });
+
         return (
-          <div key={index} className="app-container__link" onClick={this._setCurrentChildComponentIndex.bind(this, index)}>
+          <div key={index} className={classes}
+            onClick={this._setCurrentChildComponentIndex.bind(this, index)}>
             {linkCaption}
           </div>);
       });
 
     return (
       <div className="app-container">
-        <div className="app-container__links">
+        <div className="app-container__links box container">
           {links}
         </div>
 
@@ -40,8 +47,9 @@ class App extends Component {
   // Populate the child components here
   get _childComponents() {
     return [
-      { linkCaption: 'Link 1', component: <div /> },
-      { linkCaption: 'Link 2', component: <div /> }
+      { linkCaption: 'Overview', component: <div /> },
+      { linkCaption: 'Transaction', component: <div /> },
+      { linkCaption: 'Reaching your target', component: <div /> }
     ]
   }
 

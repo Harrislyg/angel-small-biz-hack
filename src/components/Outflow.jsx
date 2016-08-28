@@ -8,8 +8,6 @@ class Outflow extends React.Component {
     super(props)
   }
 
-  // filter(a) { return Date(a.date).getMonth()+1 === this.props.sliderDate }
-
   render () {
     // console.log('Inflow Data', this.state.inflowData)
     let date = this.props.sliderDate;

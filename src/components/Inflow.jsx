@@ -9,11 +9,7 @@ class Inflow extends React.Component {
     super(props)
   }
 
-
-  // filter(a) { return Date(a.date).getMonth()+1 === this.props.sliderDate }
-
   render () {
-    // console.log('Inflow Data', this.state.inflowData)
     let date = this.props.sliderDate;
     console.log("this is the " + date)
 
@@ -23,9 +19,8 @@ class Inflow extends React.Component {
     filteredDate = this.props.inflowData.filter((a) => (new Date(a.date).getMonth() + 1 == date) && a.type == 'inflow' && a.category == this.props.category)
   }
 
-  console.log('Outflow date', filteredDate)
-  console.log(this.props.inflowData)
-    // let filteredDate = this.state.inflowData.filter(=>)
+    console.log('Outflow date', filteredDate)
+    console.log(this.props.inflowData)
 
     return (
         <div>

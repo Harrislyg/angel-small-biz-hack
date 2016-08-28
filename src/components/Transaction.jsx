@@ -23,9 +23,9 @@ class Transaction extends React.Component {
   }
 
   handleChange (event) {
-  this.setState({
-    currentMonth: event.target.value
-  })
+    this.setState({
+      currentMonth: event.target.value
+    })
   }
 
   handleSelect (event) {
@@ -46,11 +46,7 @@ class Transaction extends React.Component {
     return (
       <div>
         <div>
-        <Header />
-        <Goals />
         <Slider onClick={this.handleChange} currentMonth={this.state.currentMonth} />
-        <Line />
-        <p>Likes</p>
         </div>
         <Inflow onSelect={this.handleSelect} category={this.state.category} inflowData={transactionData} sliderDate={this.state.currentMonth}/>
         <Outflow onOutflow={this.handleOutflow} categoryOutflow={this.state.categoryOutflow} outflowData={transactionData} sliderDate={this.state.currentMonth}/>

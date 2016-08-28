@@ -19,7 +19,6 @@ class App extends Component {
     this.state = {
       // Initialize state to always open the first child
       currentChildComponentIndex: 0
-
     }
   }
 
@@ -46,7 +45,6 @@ class App extends Component {
 
 
 
-        <Analytics />
         <div className="app-container__child">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>

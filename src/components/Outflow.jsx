@@ -34,7 +34,7 @@ class Outflow extends React.Component {
                   <option value="Miscellaneous">Miscellaneous</option>
                 </select>
                 </th>
-                <th>withdrawals</th>
+                <th>Withdrawals</th>
                 <th>Balance</th>
               </tr>
 

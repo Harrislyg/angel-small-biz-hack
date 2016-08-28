@@ -36,11 +36,11 @@ class MonthSlider extends Component {
   }
 
   _onSliderValueChanged() {
-    this.props.onMonthChanged(this._rangeSlider.value)
+    this.props.onMonthChanged(parseInt(this._rangeSlider.value))
   }
 
   _onMonthLabelClicked(monthNumber) {
-    this.props.onMonthChanged(monthNumber)
+    this.props.onMonthChanged(parseInt(monthNumber))
   }
 }
 

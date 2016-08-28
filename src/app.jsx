@@ -12,7 +12,6 @@ import ReachingTarget from './components/ReachingTarget.jsx'
 require('./scss/application.scss')
 
 class App extends Component {
-
   constructor(props) {
     super(props)
 
@@ -21,9 +20,6 @@ class App extends Component {
       currentChildComponentIndex: 0
     }
   }
-
-
-
 
   render() {
     let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
@@ -43,15 +39,9 @@ class App extends Component {
           {links}
         </div>
 
-
-
-        <div className="app-container__child">
+        <div className="app-container__child box container">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
-
-
-
-
       </div>
     )
   }

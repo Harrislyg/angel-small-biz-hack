@@ -1,8 +1,8 @@
 var React = require('react')
+import CurrencyFormatter from '../helpers/CurrencyFormatter.js'
 
 class Outflowrow extends React.Component {
   render () {
-    // console.log('inflowRow', this.props.inflowRow)
     return (
         <tr>
           <td>
@@ -11,11 +11,11 @@ class Outflowrow extends React.Component {
           <td>
             {this.props.outflowRow.category}
           </td>
-          <td>
-            {Math.round(this.props.outflowRow.withdrawals * 100) / 100}
+          <td className="currency">
+            {CurrencyFormatter.formatCurrency(this.props.outflowRow.withdrawals)}
           </td>
-          <td>
-            {Math.round(this.props.outflowRow.balance * 100) / 100}
+          <td className="currency">
+            {CurrencyFormatter.formatCurrency(this.props.outflowRow.balance)}
           </td>
         </tr>
     )

@@ -3,3 +3,25 @@
 @import "components/app_container";
 @import "components/overview";
 @import "components/month_slider";
+@import "components/transaction";
+
+.pie-chart {
+  margin-top: 2em;
+}
+
+.reaching-target {
+  padding: 2em;
+}
+
+table {
+  margin: auto;
+  margin-top: 1em;
+}
+
+td {
+  padding: .5em .1em;
+}
+
+.currency {
+  text-align: right;
+}

@@ -128,7 +128,7 @@ class Overview extends Component {
 
   _onMonthSliderValueChanged(newValue) {
     this.setState({
-      currentMonth: parseInt(newValue)
+      currentMonth: newValue
     })
   }
 

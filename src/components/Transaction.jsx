@@ -1,7 +1,8 @@
 var React = require('react')
 var Inflow = require('./Inflow.jsx')
 var Outflow = require('./Outflow.jsx')
-import Slider from './Slider.jsx'
+
+import MonthSlider from './MonthSlider.jsx'
 import Header from './Header.jsx'
 import Goals from './Goals.jsx'
 import Line from './Line.jsx'
@@ -19,15 +20,15 @@ class Transaction extends React.Component {
       category: 'All',
       categoryOutflow: 'All'
     }
-  this.handleChange = this.handleChange.bind(this)
-  this.handleSelect = this.handleSelect.bind(this)
-  this.handleOutflow = this.handleOutflow.bind(this)
 
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
+    this.handleOutflow = this.handleOutflow.bind(this)
   }
 
-  handleChange (event) {
+  handleChange(newMonth) {
     this.setState({
-      currentMonth: event.target.value
+      currentMonth: newMonth + 1
     })
   }
 
@@ -49,30 +50,31 @@ class Transaction extends React.Component {
       outflow
     } = this.props;
 
-    console.log('Transaction', transactionData)
-    console.log(this.state.currentMonth)
+    let month = this.state.currentMonth;
+    if (month < 8) {
+      month = 8;
+    }
+
     return (
-      <div>
-        <div>
-        <Slider onClick={this.handleChange} currentMonth={this.state.currentMonth} />
-        </div>
+      <div className="transaction__container">
+        <MonthSlider currentMonth={month - 1} onMonthChanged={this.handleChange} />
 
-        <InflowPie data={inflow} month={this.state.currentMonth} />
-        <Inflow onSelect={this.handleSelect} category={this.state.category} inflowData={transactionData} sliderDate={this.state.currentMonth}/>
+        <InflowPie data={inflow} month={month} />
+        <Inflow onSelect={this.handleSelect} category={this.state.category} inflowData={transactionData} sliderDate={month} />
 
-        <OutflowPie data={outflow} month={this.state.currentMonth} />
-        <Outflow onOutflow={this.handleOutflow} categoryOutflow={this.state.categoryOutflow} outflowData={transactionData} sliderDate={this.state.currentMonth}/>
+        <OutflowPie data={outflow} month={month} />
+        <Outflow onOutflow={this.handleOutflow} categoryOutflow={this.state.categoryOutflow} outflowData={transactionData} sliderDate={month}/>
       </div>
     )
   }
 }
 Transaction.defaultProps={
   outflow: [
-  [42,20,19,13,6],
-  [27,19,24,13,7],
-  [46,21,22,8,3],
-  [48,18,21,7,6],
-  [21,19,20,13,7]
+    [42,20,19,13,6],
+    [27,19,24,13,7],
+    [46,21,22,8,3],
+    [48,18,21,7,6],
+    [21,19,20,13,7]
   ],
   inflow: [
     [33,18,49],

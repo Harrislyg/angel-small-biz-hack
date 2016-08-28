@@ -1,0 +1,237 @@
+{
+    "Status": {
+        "StatusCode": "0",
+        "Severity": "Info",
+        "StatusDescription": "Success",
+        "ServerStatusCode": "64000",
+        "ServerStatusDescription": "PROCESSING COMPLETED SUCCESSFULLY."
+    },
+    "DetailAccountList": {
+        "BasicAccountDetail": {
+            "AccountPrimaryIdentifier": {
+                "OperatingCompanyIdentifier": "125",
+                "ProductCode": "CHX",
+                "PrimaryIdentifier": "4444444444444444"
+            },
+            "BalanceAmount": "0.0",
+            "BranchNumber": "0",
+            "Codes": {
+                "AccountStatusCode": "AA",
+                "AuthorizedAccessCode": "0",
+                "CategoryCode": "PLAS",
+                "EmployeeCode": "N",
+                "RetailCommercialCode": "R",
+                "SubProductCode": "CX"
+            },
+            "CostCenter": "7522",
+            "Dates": {
+                "AccountOpenedDate": "1994-06-02",
+                "LastMaintenanceDate": "2015-09-09"
+            },
+            "OfficerCode1": "99999",
+            "OfficerName1": "PRIMARY TITLE #1",
+            "OfficerTelephoneNumber1": "6125551212",
+            "StatusDescription": "ACTIVE",
+            "USTaxIdentification": {
+                "USTaxIdentifierTypeCode": "SSN",
+                "USTaxIdentifier": "153426394"
+            },
+            "AddressAndTitle": {
+                "AccountTitle": "CHRISTOPHER P BURLOVIC",
+                "Address": {
+                    "USAddressSwitch": "true",
+                    "AddressLine1": "1110 W LAKE COOK RD STE 152",
+                    "City": "BUFFALO GROVE",
+                    "StateCode": "IL",
+                    "ZipCode": "60089",
+                    "ZipPlus4": "1997"
+                },
+                "AccountToAddressLastUpdateDate": "2001-01-05",
+                "CountryName": "UNITED STATES OF AMERICA",
+                "ISOCountryCode": "840"
+            }
+        },
+        "CardAccount": {
+            "AccountDetail": {
+                "AccountKeyIdentifier": {
+                    "OperatingCompanyIdentifier": "125",
+                    "ProductCode": "DDA",
+                    "PrimaryIdentifier": "000111111111111"
+                },
+                "Amounts": {
+                    "ATMMaximumOfflinePerDayAmount": "300",
+                    "ATMMaximumOnlinePerDayAmount": "500",
+                    "ATMOnlineLimitAmount": "500",
+                    "AvailableRewardsBalanceAmount": "0.0",
+                    "CardAvailableBalanceAmount": "581.77",
+                    "CurrentYearForeignExpirationAmount": "0",
+                    "CurrentYearLocalExpirationAmount": "0",
+                    "DDAAvailableBalanceAmount": "278.94",
+                    "DDAOpeningLedgerBalanceAmount": "278.94",
+                    "FixedFeeAmount": {
+                        "RushCardFeeAmount": "0.01",
+                        "MonthlyCheckCardUsageFeeAmount": "25.0",
+                        "CustomerRequestedCardReplacementFeeAmount": "5.0",
+                        "CheckCardStatementFeeAmount1": "2.99",
+                        "CheckCardStatementFeeAmount2": "7.5",
+                        "CheckCardReprintStatementFeeAmount": "6.0",
+                        "DesingerCheckCardFeeAmount": "5.0"
+                    },
+                    "LastTransactionAmount": "14.42",
+                    "OutstandingAuthorizationAmount": "0.0",
+                    "POSMaximumOfflinePerDayAmount": "1500",
+                    "POSMaximumOnlinePerDayAmount": "3000",
+                    "PointofSaleOnlineLimitAmount": "0",
+                    "PointofSaleUsageLimitAmount": "0"
+                },
+                "AvailableRewardsBalancePoints": "0",
+                "AssociatedTokenIndicator": "Y",
+                "CardsOutstanding": "1",
+                "Codes": {
+                    "AccountTypeCode": "CX1",
+                    "CardActivationIndicator": "Y",
+                    "CardholderKeyBasePreviousStatusCode": "NW",
+                    "CurrentAccountStatusCode": "AA",
+                    "CustomerSelectedPinIndicatorCode": "Y",
+                    "EnrollmentStatusCode": "C",
+                    "FreeMoneeEligibilityCode": "N",
+                    "LastTransactionCategoryCode": "PU",
+                    "OnlineAllowedCode": "Y",
+                    "PlasticTriggerStatusCode": "LAST",
+                    "PreviousCardActivationCode": "Y",
+                    "PreviousCardActivationMethodCode": "IVR",
+                    "PrintAllowedCode": "N",
+                    "ProductCode": "CHX",
+                    "ReprintAllowedCode": "Y",
+                    "StyleCode": "CCC",
+                    "SubProductCode": "16",
+                    "VisaMoneyTransferEligibilityCode": "N"
+                },
+                "CurrentAvailableRewardPoints": "DUM",
+                "CurrentGiftOffer": {
+                    "MonthToDateAmount": "0.0",
+                    "YearToDateAmount": "0.0",
+                    "ProgramToDateAmount": "0.0"
+                },
+                "CycleTransaction": [
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "FEB2016"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "JAN2016"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "DEC2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "NOV2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "OCT2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "0",
+                        "CycleTransactionCountDate": "SEP2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "5",
+                        "CycleTransactionCountDate": "AUG2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "11",
+                        "CycleTransactionCountDate": "JUL2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "11",
+                        "CycleTransactionCountDate": "JUN2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "6",
+                        "CycleTransactionCountDate": "MAY2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "7",
+                        "CycleTransactionCountDate": "APR2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "9",
+                        "CycleTransactionCountDate": "MAR2015"
+                    },
+                    {
+                        "CycleTransactionCountNumber": "7",
+                        "CycleTransactionCountDate": "FEB2015"
+                    }
+                ],
+                "Dates": {
+                    "CardActivationDate": "2013-01-24",
+                    "CardholderKeyBaseChangeStatusDate": "2001-01-05",
+                    "ExpirationDate": "2016-03-31",
+                    "FirstUsedDate": "1994-08-06",
+                    "InitialIssueDate": "1994-06-02",
+                    "LastReissueDate": "2013-01-10",
+                    "LastTransactionDate": "2015-08-12",
+                    "LastUpdateDate": "2015-09-09",
+                    "OpenedDate": "1994-06-02",
+                    "PlasticTriggerDate": "2013-01-10",
+                    "PreviousCardActivationDate": "2010-01-30",
+                    "PreviousExpirationDate": "2013-02-28",
+                    "StyleEffectiveDate": "1994-06-02"
+                },
+                "DeliveredGiftOffer": {
+                    "MonthToDateAmount": "0.0",
+                    "YearToDateAmount": "0.0",
+                    "ProgramToDateAmount": "0.0"
+                },
+                "Descriptions": {
+                    "DesignatedPrimaryAccountRewardsDescription": "ZBR INTERNAL",
+                    "ShortDescription": "ACTIVE",
+                    "StyleDescription": "CONSUMER"
+                },
+                "InternalStyle": "CCC",
+                "ExpiredGiftOffer": {
+                    "MonthToDateAmount": "0.0",
+                    "YearToDateAmount": "0.0",
+                    "ProgramToDateAmount": "0.0"
+                },
+                "LastUpdateOperatorID": "PROD2",
+                "LastUpdateTermminalID": "BIMD0018",
+                "Numbers": {
+                    "ATMMaximumUsePerDayNumber": "25",
+                    "CardsOutstandingNumber": "1",
+                    "CardReplacementHistoryTotal": "0",
+                    "CommercialFinancialIdentifier": "419002125",
+                    "CompanyNumber": "125",
+                    "CurrentYearPointOfSalePurchaseNumber": "640",
+                    "InitialCardsNumber": "1",
+                    "IssuedPlasticNumber": "4190 0212 5005 4208",
+                    "LastReissueCardsNumber": "1",
+                    "NextReissueCardsNumber": "0",
+                    "PinRequestNumber": "0",
+                    "POSMaximumUsePerDayNumber": "25",
+                    "PrimaryCardsActiveNumber": "1",
+                    "PrimaryRelatedAccountNumber": "00000000000198224170409",
+                    "PrincipalBankNumber": "0582",
+                    "YTDPinChangeNumberOfTimes": "0"
+                },
+                "RedeemedGiftOffer": {
+                    "MonthToDateAmount": "0.0",
+                    "YearToDateAmount": "0.0",
+                    "ProgramToDateAmount": "0.0"
+                },
+                "Tenant": {
+                    "EmbossNameLine_1": "CHRISTOPHER P BURLOVIC"
+                },
+                "Time": {
+                    "LastUpdateTime": "20:37:19",
+                    "CardActivationTime": "14:17:46",
+                    "PreviousCardActivationTime": "14:16:34"
+                }
+            }
+        }
+    }
+}

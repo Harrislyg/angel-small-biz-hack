@@ -1,0 +1,27 @@
+{
+    "MessageStatus": {
+        "StatusCode": "0",
+        "Severity": "Info",
+        "StatusDescription": "Success"
+    },
+    "RequestIdentifier": "0f8fad5b-d9cb-469f-a165-70867728950e",
+    "AccountInquiryResponse": {
+        "AccountType": "CNS",
+        "ProductName": "Toyota Rewards Visa�",
+        "CustomerName1": "JILL ANNE SMOLENSKY",
+        "SSN1": "17753005",
+        "SSN2": "0",
+        "SSN3": "0",
+        "Address": {
+            "AddressLine1": "627 EDMONDSON AVE # A",
+            "City": "CATONSVILLE",
+            "State": "MD",
+            "ZipCode": "212283304"
+        },
+        "HomePhone": "4107975653",
+        "SignatureFlag": "No",
+        "CreditLine": "7200",
+        "AccountStatus": "Good Account",
+        "AccountLast4": "2354"
+    }
+}

@@ -19,9 +19,11 @@ class App extends Component {
     this.state = {
       // Initialize state to always open the first child
       currentChildComponentIndex: 0
-
     }
   }
+
+
+
 
   render() {
     let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
@@ -41,9 +43,15 @@ class App extends Component {
           {links}
         </div>
 
-        <div className="app-container__child box container">
+
+
+        <div className="app-container__child">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
+
+
+
+
       </div>
     )
   }

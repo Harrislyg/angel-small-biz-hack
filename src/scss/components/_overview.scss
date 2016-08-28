@@ -9,9 +9,17 @@ $overview-stats-title-inset: .875rem;
 //-------------------------------------------------------------------------------------------------
 .overview__container {
   padding: 2em;
-  padding-top: 5em;
 }
 
+<<<<<<< Updated upstream
+=======
+.overview__stats {
+  margin-top: 3em;
+  display: flex;
+  align-items: flex-start;
+}
+
+>>>>>>> Stashed changes
 .overview__stats--item {
   display: inline-block;
   margin-right: 3em;

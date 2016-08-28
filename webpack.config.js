@@ -15,8 +15,12 @@ const config = {
     loaders: [
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.jsx?$/, include: APP_DIR, loader: 'babel' },
-      { test: /\.scss$/, loaders: ["style", "css", "sass"] }
-    ]
+      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
+      { test: /\.png$/, loader: 'file' }
+    ],
+    noParse: [
+      /plotly\.js/
+    ],
   },
   plugins: [new HtmlWebpackPlugin({
     template: `!!pug!${APP_DIR}/index.pug`

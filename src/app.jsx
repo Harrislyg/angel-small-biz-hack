@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Analytics from './components/Analytics.jsx';
 import { render } from 'react-dom'
 import classNames from 'classnames'
-import rd3 from 'react-d3';
 
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')

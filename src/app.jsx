@@ -4,6 +4,7 @@ import classNames from 'classnames'
 
 // Load external modules
 const Transaction = require('./components/Transaction.jsx')
+const Overview = require('./components/Overview.jsx')
 
 // Load stylesheets
 require('./scss/application.scss')
@@ -37,7 +38,7 @@ class App extends Component {
           {links}
         </div>
 
-        <div className="app-container__child">
+        <div className="app-container__child box container">
           {this._childComponents[this.state.currentChildComponentIndex].component}
         </div>
       </div>
@@ -47,8 +48,8 @@ class App extends Component {
   // Populate the child components here
   get _childComponents() {
     return [
-      { linkCaption: 'Overview', component: <div /> },
-      { linkCaption: 'Transaction', component: <div /> },
+      { linkCaption: 'Overview', component: <Overview /> },
+      { linkCaption: 'Transaction', component: <Transaction /> },
       { linkCaption: 'Reaching your target', component: <div /> }
     ]
   }

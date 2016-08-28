@@ -1,8 +1,9 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const APP_DIR = path.resolve(__dirname, 'src');
-const BUILD_DIR = path.resolve(__dirname, 'dist');
+const APP_DIR = path.resolve(__dirname, 'src')
+const BUILD_DIR = path.resolve(__dirname, 'dist')
 
 const config = {
   entry: `${APP_DIR}/app.jsx`,
@@ -15,7 +16,10 @@ const config = {
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.jsx?$/, include: APP_DIR, loader: 'babel' }
     ]
-  }
-};
+  },
+  plugins: [new HtmlWebpackPlugin({
+    template: `!!pug!${APP_DIR}/index.pug`
+  })]
+}
 
-module.exports = config;
+module.exports = config

@@ -1,20 +1,55 @@
-import React from 'react';
-import { render } from 'react-dom';
-var Transaction = require('./components/Transaction.jsx')
+import React, { Component, PropTypes } from 'react'
+import { render } from 'react-dom'
 
-class App extends React.Component {
+// Load external modules
+const Transaction = require('./components/Transaction.jsx')
+
+class App extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      // Initialize state to always open the first child
+      currentChildComponentIndex: 0
+    }
+  }
+
   render() {
+    let links = this._childComponents.map((componentInfo) => componentInfo.linkCaption)
+      .map((linkCaption, index) => {
+        return (
+          <div key={index} className="app-container__link" onClick={this._setCurrentChildComponentIndex.bind(this, index)}>
+            {linkCaption}
+          </div>);
+      });
+
     return (
-      <div>
-      <p>Hello World</p>
-      <Transaction />
+      <div className="app-container">
+        <div className="app-container__links">
+          {links}
+        </div>
+
+        <div className="app-container__child">
+          {this._childComponents[this.state.currentChildComponentIndex].component}
+        </div>
       </div>
     )
   }
+
+  // Populate the child components here
+  get _childComponents() {
+    return [
+      { linkCaption: 'Link 1', component: <div /> },
+      { linkCaption: 'Link 2', component: <div /> }
+    ]
+  }
+
+  _setCurrentChildComponentIndex(index) {
+    this.setState({
+      currentChildComponentIndex: index
+    });
+  }
 }
 
-const appDiv = document.createElement('div');
-appDiv.id = 'app';
-document.body.appendChild(appDiv);
-
-render(<App />, appDiv);
+render(<App />, document.getElementById('app'))

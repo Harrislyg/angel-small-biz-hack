@@ -1,9 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
+var Transaction = require('./components/Transaction.jsx')
 
 class App extends React.Component {
   render() {
-    return <p>Whatever</p>;
+    return (
+      <div>
+      <p>Hello World</p>
+      <Transaction />
+      </div>
+    )
   }
 }
 

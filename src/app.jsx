@@ -2,7 +2,7 @@ require('html!./index.html');
 
 import React from 'react';
 import { render } from 'react-dom';
-var Transaction = require('./components/Transaction.jsx')
+let Transaction = require('./components/Transaction.jsx')
 
 class App extends React.Component {
   render() {

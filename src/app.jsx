@@ -1,7 +1,8 @@
-import React from 'react'
-import { render } from 'react-dom'
-var Transaction = require('./components/Transaction.jsx')
+require('html!./index.html');
 
+import React from 'react';
+import { render } from 'react-dom';
+var Transaction = require('./components/Transaction.jsx')
 
 class App extends React.Component {
   render() {
@@ -14,4 +15,8 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementsByTagName('body')[0]);
+const appDiv = document.createElement('div');
+appDiv.id = 'app';
+document.body.appendChild(appDiv);
+
+render(<App />, appDiv);

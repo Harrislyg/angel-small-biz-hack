@@ -12,7 +12,7 @@ const config = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" },
+      { test: /\.css$/, loader: 'style!css' },
       { test: /\.jsx?$/, include: APP_DIR, loader: 'babel' }
     ]
   }

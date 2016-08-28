@@ -1,5 +1,3 @@
-require('html!./index.html');
-
 import React from 'react';
 import { render } from 'react-dom';
 let Transaction = require('./components/Transaction.jsx')

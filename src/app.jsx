@@ -1,11 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-let Transaction = require('./components/Transaction.jsx')
+import Header from './components/Header.jsx';
+import Transaction from './components/Transaction.jsx';
 
 class App extends React.Component {
   render() {
     return (
       <div>
+      <Header />
       <p>Hello World</p>
       <Transaction />
       </div>

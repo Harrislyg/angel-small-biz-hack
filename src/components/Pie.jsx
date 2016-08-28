@@ -1,36 +1,25 @@
 import React from 'react';
 // import Plotly from 'react-plotlyjs';
-const LineChart = require('react-chartjs').Line;
+const PieChart = require('react-chartjs').Pie;
 
-class Line extends React.Component {
+class Pie extends React.Component {
 
 	render(){
 
-	const data= {
-        datasets: [{
-            label: 'Scatter Dataset',
-            data: [ 0,8678,9862,13254,13856],
-            fillColor: 'rgba(220,220,220,0.2)',
-            pointColor: 'rgba(220,220,220,1)',
-            pointHighlightFill: '#fff' ,
-            pointHighlightStroke: 'rgba(220,220,220,1)' ,
-            pointStrokeColor: '#fff',
-            strokeColor: 'rgba(220,220,220,1)',
-        }, {
-            label: 'Scatter Dataset2',
-            data: [0,9324,6732,4941,3935 ],
-            fillColor: 'rgba(151,187,205,0.2)',
-            pointColor: 'rgba(151,187,205,1)',
-            pointHighlightFill: '#fff' ,
-            pointHighlightStroke: 'rgba(151,187,205,1)' ,
-            pointStrokeColor: '#fff',
-            strokeColor: 'rgba(151,187,205,1)',
-        }
-        ],
-
-        labels : ["Jan" , "March" , "June" ,"Sept" , "Dec"]
-
-    };
+	const data=
+        [{value:91.82349378988447,
+        	color:'#F7464A',
+        	highlight:'#FF5A5E',
+        	label:'Red',
+        },
+        {value:164.5245314190956,
+       	color:'#46BFBD',
+        highlight:'#5AD3D1',
+        label:'Green'},
+        {value:96.46570741652802,color:'#FDB45C',highlight:'#FFC870',label:'Yellow'},
+        {value:27.780361889841565,color:'#949FB1',highlight:'#A8B3C5',label:'Grey'},
+        {value:107.91181512597598,color:'#4D5360',highlight:'#616774',label:'Dark Grey'}
+        ];
 
     const options =  {
     	responsive: true,
@@ -98,10 +87,10 @@ class Line extends React.Component {
 
 		return (
 			<div>
-			<LineChart data={data} options={options} />
+			<PieChart data={data} options={options} />
 			</div>
 		);
 	}
 }
 
-export default Line;
+export default Pie;

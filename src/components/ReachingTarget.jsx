@@ -1,28 +1,11 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Header from './Header.jsx';
-import Line from './Line.jsx';
-import Bar from './Bar.jsx';
-import BarChart2 from './BarChart2.jsx';
-import Slider from './Slider.jsx';
-import Goals from './Goals.jsx';
-import Pie from './Pie.jsx';
-import GuageBar from './GuageBar.jsx';
+import React, { Component } from 'react'
 
-class ReachingTarget extends React.Component {
-  	constructor(props) {
-      super(props)
-    }
-
-
-
+class ReachingTarget extends Component {
   render() {
     return (
-      <div>
-
-      </div>
-    );
+      <div className="reaching-target"></div>
+    )
   }
 }
 
-export default ReachingTarget;
+export default ReachingTarget

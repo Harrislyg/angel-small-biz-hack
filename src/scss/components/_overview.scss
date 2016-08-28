@@ -9,7 +9,12 @@ $overview-stats-title-inset: .875rem;
 //-------------------------------------------------------------------------------------------------
 .overview__container {
   padding: 2em;
-  padding-top: 5em;
+}
+
+.overview__stats {
+  margin-top: 3em;
+  display: flex;
+  align-items: flex-start;
 }
 
 .overview__stats {

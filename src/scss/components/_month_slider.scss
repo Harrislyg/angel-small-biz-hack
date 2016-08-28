@@ -1,3 +1,10 @@
+.slider--month__title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .75rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
 .slider--month {
   -webkit-appearance: none;
   width: 100%;
@@ -47,7 +54,7 @@
   margin-top: .25em;
   display: flex;
   justify-content: space-between;
-  transform: scaleX(1.025);
+  width: calc(100% + .5em);
 }
 
 .slider--month__label {
@@ -55,4 +62,10 @@
   font-family: "PT Sans", sans-serif;
   font-size: .75em;
   color: #888;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    color: #333;
+  }
 }

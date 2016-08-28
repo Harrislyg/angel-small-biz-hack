@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react'
-import Analytics from './components/Analytics.jsx';
 import { render } from 'react-dom'
 import classNames from 'classnames'
 
 // Load external modules
-const Transaction = require('./components/Transaction.jsx')
-const Overview = require('./components/Overview.jsx')
-const ReachingTarget = require('./components/ReachingTarget.jsx')
+import Analytics from './components/Analytics.jsx'
+import Transaction from './components/Transaction.jsx'
+import Overview from './components/Overview.jsx'
+import ReachingTarget from './components/ReachingTarget.jsx'
 
 // Load stylesheets
 require('./scss/application.scss')
@@ -61,9 +61,9 @@ class App extends Component {
   // Populate the child components here
   get _childComponents() {
     return [
-      { linkCaption: 'Overview', component:<Overview/> },
-      { linkCaption: 'Transaction', component: <Transaction/> },
-      { linkCaption: 'Reaching your target', component: <ReachingTarget/> }
+      { linkCaption: 'Overview', component:<Overview /> },
+      { linkCaption: 'Transaction', component: <Transaction /> },
+      { linkCaption: 'Reaching Your Target', component: <ReachingTarget /> }
     ]
   }
 

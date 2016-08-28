@@ -5,59 +5,74 @@ import MonthUtilities from '../helpers/MonthUtilities'
 import Line from './Line.jsx'
 import MonthSlider from './MonthSlider.jsx'
 
+import transactionData from '!json!../data/filtered.json'
+
 class Overview extends Component {
   constructor(props) {
     super(props)
 
+    let currentMonth = new Date().getMonth()
+
     this.state = {
-      currentMonth: new Date().getMonth(),
-      editingYourTarget: false
+      currentMonth: currentMonth,
+      editingYourTarget: false,
+      yourTargetAmount: 0,
+      yourTargetMonth: currentMonth
     }
 
     // Binding methods
     this._onMonthSliderValueChanged = this._onMonthSliderValueChanged.bind(this);
+    this._handleChange = this._handleChange.bind(this);
+    this._endEditingYourTargetAmount = this._endEditingYourTargetAmount.bind(this);
   }
 
-  static get propTypes() { return {
-    inflowsAmount: PropTypes.number.isRequired,
-    outflowsAmount: PropTypes.number.isRequired,
-    yourBalanceAmount: PropTypes.number.isRequired,
-    yourTargetAmount: PropTypes.number.isRequired,
-    yourBalanceMonth: PropTypes.number,
-    yourTargetMonth: PropTypes.number
-  }}
+  // Data calculation
+  _getInflowsAmountForMonth(month) {
+    let filteredTransactions = transactionData.filter((d) => new Date(d.date).getMonth() === month)
+      .filter((d) => d.type === 'inflow')
+    return filteredTransactions.reduce((prev, current) => prev + current.deposits, 0)
+  }
 
-  static get defaultProps() { return {
-    inflowsAmount: 0,
-    outflowsAmount: 0,
-    yourBalanceAmount: 0,
-    yourTargetAmount: 0,
-    yourBalanceMonth: new Date().getMonth(),
-    yourTargetMonth: new Date().getMonth()
-  }}
+  _getOutflowsAmountForMonth(month) {
+    let filteredTransactions = transactionData.filter((d) => new Date(d.date).getMonth() === month)
+      .filter((d) => d.type === 'outflow')
+    return filteredTransactions.reduce((prev, current) => prev + current.withdrawals, 0)
+  }
+
+  _getBalanceAmountForMonth(month) {
+    let filteredTransactions = transactionData.filter((d) => new Date(d.date).getMonth() === month)
+    let sortedTransactions = filteredTransactions.map((d) => { return { date: new Date(d.date).getDate(), balance: d.balance }})
+      .sort((a, b) => b.date - a.date)
+    let lastTransaction = sortedTransactions[0]
+    return lastTransaction.balance
+  }
 
   render() {
+    let inflowsAmount = this._getInflowsAmountForMonth(this.state.currentMonth)
+    let outflowsAmount = this._getOutflowsAmountForMonth(this.state.currentMonth)
+    let yourBalanceAmount = this._getBalanceAmountForMonth(this.state.currentMonth)
+
     let statsItems = [{
       title: 'Inflows',
       currency: 'US$',
-      amount: this.props.inflowsAmount,
+      amount: inflowsAmount,
       identifier: 'inflows'
     }, {
       title: 'Outflows',
       currency: 'US$',
-      amount: this.props.outflowsAmount,
+      amount: outflowsAmount,
       identifier: 'outflows'
     }, {
       title: 'Your Balance',
       currency: 'US$',
-      amount: this.props.yourBalanceAmount,
-      subtitle: `in the month of ${MonthUtilities.monthNames[this.props.yourBalanceMonth]}`,
+      amount: yourBalanceAmount,
+      subtitle: `in the month of ${MonthUtilities.monthNames[this.state.currentMonth]}`,
       identifier: 'your_balance'
     }, {
       title: 'Your Target',
       currency: 'US$',
-      amount: this.props.yourTargetAmount,
-      subtitle: `in the month of ${MonthUtilities.monthNames[this.props.yourTargetMonth]}`,
+      amount: this.state.yourTargetAmount,
+      subtitle: `in the month of ${MonthUtilities.monthNames[this.state.yourTargetMonth]}`,
       identifier: 'your_target'
     }]
 
@@ -67,8 +82,27 @@ class Overview extends Component {
         subtitleNode = <div className="overview__stats--subtitle">{statsData.subtitle}</div>;
       }
 
-      let amountNode = <div className="overview__stats--amount">{CurrencyFormatter.formatCurrency(statsData.amount)}</div>;
+      let amountInnerNode = CurrencyFormatter.formatCurrency(statsData.amount);
       if (statsData.identifier === 'your_target') {
+        if (this.state.editingYourTarget) {
+          amountInnerNode = (
+            <input
+              type='number'
+              onChange={this._handleChange}
+              onKeyUp={this._onYourTargetChanged.bind(this)}
+              onBlur={this._endEditingYourTargetAmount}
+              value={this.state.yourTargetAmount}
+              ref={(t) => this._yourTargetAmountField = t }
+            />
+          )
+        } else {
+          amountInnerNode = CurrencyFormatter.formatCurrency(this.state.yourTargetAmount)
+        }
+      }
+
+      let amountNode = <div className="overview__stats--amount">{amountInnerNode}</div>
+      if (statsData.identifier === 'your_target' && !this.state.editingYourTarget) {
+        amountNode = <div className="overview__stats--amount" onClick={this._beginEditingYourTargetAmount.bind(this)}>{amountInnerNode}</div>
       }
 
       return (
@@ -94,8 +128,30 @@ class Overview extends Component {
 
   _onMonthSliderValueChanged(newValue) {
     this.setState({
-      currentMonth: newValue
-    });
+      currentMonth: parseInt(newValue)
+    })
+  }
+
+  _handleChange(event) {
+    this.setState({
+      yourTargetAmount: event.target.value
+    })
+  }
+
+  _beginEditingYourTargetAmount() {
+    this.setState({
+      editingYourTarget: true
+    })
+  }
+
+  _endEditingYourTargetAmount() {
+    this.setState({
+      editingYourTarget: false
+    })
+  }
+
+  _onYourTargetChanged() {
+    console.log(this._yourTargetAmountField.value);
   }
 
   get _lineChartOptions() { return {

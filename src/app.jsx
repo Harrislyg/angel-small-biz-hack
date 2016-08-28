@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import Header from './components/Header.jsx';
+import Transaction from './components/Transaction.jsx';
 import { render } from 'react-dom'
 
 // Load external modules

@@ -8,9 +8,10 @@ class Slider extends React.Component {
     this.state = {
       currentMonth: 8
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(){
+  handleChange(e){
     this.setState({
       currentMonth: e.target.value
     });
@@ -18,8 +19,8 @@ class Slider extends React.Component {
 
   render() {
     return (
-      <div>
-      <input id="typeinp" type="range" min="0" max="5" value="3" step="1"/>
+      <div onChange={this.handleChange}>
+      <input id="typeinp" type="range" min="1" max="12" step="1"/>
         {this.state.currentMonth}
       </div>
     );
